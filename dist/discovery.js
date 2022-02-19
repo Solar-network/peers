@@ -34,7 +34,7 @@ class PeerDiscovery {
                     seeds.push({ ip: seed.ip, port });
                 }
             } else {
-                const body = await ky_universal_1.default.get(`https://raw.githubusercontent.com/solar-network/peers/${networkOrHost}/peers.json`).json();
+                const body = await ky_universal_1.default.get(`https://raw.githubusercontent.com/solar-network/peers/master/${networkOrHost}/p2p.json`).json();
                 for (const seed of body) {
                     seeds.push({ ip: seed.ip, port: defaultPort });
                 }

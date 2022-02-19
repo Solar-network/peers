@@ -13,7 +13,7 @@ export class PeerDiscovery {
 
 	public static async new({
 		networkOrHost,
-		defaultPort = 4003,
+		defaultPort = 6003,
 	}: {
 		networkOrHost: string;
 		defaultPort?: number;
@@ -44,7 +44,7 @@ export class PeerDiscovery {
 				}
 			} else {
 				const body: any = await ky.get(
-					`https://raw.githubusercontent.com/ArkEcosystem/peers/master/${networkOrHost}.json`,
+					`https://raw.githubusercontent.com/solar-network/peers/master/${networkOrHost}/p2p.json`,
 				).json();
 
 				for (const seed of body) {
