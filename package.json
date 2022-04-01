@@ -1,7 +1,7 @@
 {
     "name": "@solar-network/peers",
-    "version": "3.1.2",
-    "description": "A simple TypeScript peer discovery client for the Solar Blockchain.",
+    "version": "3.2.2",
+    "description": "A simple TypeScript peer discovery client for the Solar Blockchain",
     "homepage": "https://github.com/solar-network/peers",
     "bugs": {
         "url": "https://github.com/solar-network/peers/issues"
@@ -10,8 +10,7 @@
         "type": "git",
         "url": "git@github.com:solar-network/peers.git"
     },
-    "license": "MIT",
-    "author": "Brian Faust <hello@basecode.sh>",
+    "license": "CC-BY-ND-4.0",
     "files": [
         "/dist"
     ],
@@ -23,46 +22,7 @@
         "clean": "rimraf .coverage dist tmp",
         "format": "yarn lint && yarn prettier",
         "lint": "tslint -c tslint.json -p tslint.json 'src/**/*.ts' --fix",
-        "prettier": "prettier --write \"./*.{ts,js,json,md}\" \"./**/*.{ts,js,json,md}\"",
-        "test": "jest",
-        "test:watch": "jest --watchAll"
-    },
-    "jest": {
-        "bail": true,
-        "collectCoverage": true,
-        "collectCoverageFrom": [
-            "src/**/*.ts",
-            "!src/index.ts",
-            "!src/cli/**/*.ts",
-            "!**/node_modules/**"
-        ],
-        "coverageDirectory": "<rootDir>/.coverage",
-        "coverageReporters": [
-            "json",
-            "lcov",
-            "text",
-            "clover",
-            "html"
-        ],
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js",
-            "jsx",
-            "json",
-            "node"
-        ],
-        "setupFilesAfterEnv": [
-            "jest-extended"
-        ],
-        "testEnvironment": "node",
-        "testMatch": [
-            "**/*.test.ts"
-        ],
-        "transform": {
-            "^.+\\.tsx?$": "ts-jest"
-        },
-        "verbose": false
+        "prettier": "prettier --write \"./*.{ts,js,json,md}\" \"./**/*.{ts,js,json,md}\""
     },
     "dependencies": {
         "is-url-superb": "^4.0.0",
@@ -80,8 +40,6 @@
         "@types/rimraf": "^2.0.3",
         "@types/semver": "^7.0.0",
         "codecov": "^3.6.1",
-        "jest": "^26.0.0",
-        "jest-extended": "^0.11.2",
         "prettier": "^1.19.1",
         "rimraf": "^3.0.0",
         "ts-jest": "^26.0.0",

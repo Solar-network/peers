@@ -31,8 +31,8 @@ export class PeerDiscovery {
 				for (const seed of body.data) {
 					let port = defaultPort;
 					if (seed.ports) {
-						const walletApiPort = seed.ports["@arkecosystem/core-wallet-api"];
-						const apiPort = seed.ports["@arkecosystem/core-api"];
+						const walletApiPort = seed.ports["@solar-network/core-wallet-api"] || seed.ports["@arkecosystem/core-wallet-api"];
+						const apiPort = seed.ports["@solar-network/core-api"] || seed.ports["@arkecosystem/core-api"];
 						if (walletApiPort >= 1 && walletApiPort <= 65535) {
 							port = walletApiPort;
 						} else if (apiPort >= 1 && apiPort <= 65535) {
